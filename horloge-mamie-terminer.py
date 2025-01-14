@@ -32,10 +32,7 @@ def hour():
         def alarme():
             while True:
                 x = datetime.datetime.now()
-                mtn_heure = x.hour
-                mtn_minutes = x.minute
-                mtn_secondes = x.second
-                print(f"{mtn_heure:02}:{mtn_minutes:02}:{mtn_secondes:02}", end="\r")
+                print(f"{x.hour:02}:{x.minute:02}:{x.second:02}", end="\r")
                 time.sleep(1)
                 if heure == x.hour and minute == x.minute and seconde == x.second:
                     print(("\nIl est l'heure !!!"))
@@ -61,6 +58,7 @@ def hour():
 
     else:
         print("Mauvaise commande, réessayez !")
+        return hour()
 #affiche l'heure modifier       
 def afficher_heure(heure):
     heures, minutes, secondes = heure
