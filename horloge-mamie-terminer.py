@@ -10,7 +10,7 @@ print("Modifier l'heure = 3")
 print("Voir l'heure en format AM/PM = 4")
 print("")
 
-def hour():
+def heure():
 
     commande = input("Quelle commande utiliser ? : ")
 
@@ -58,12 +58,7 @@ def hour():
 
     else:
         print("Mauvaise commande, réessayez !")
-        return hour()
-#affiche l'heure modifier       
-def afficher_heure(heure):
-    heures, minutes, secondes = heure
-    mtn = datetime.datetime.now()
-    nouv_temps = mtn.replace(hour=heures, minute=minutes, second=secondes)
-    print("Nouveau temps:", nouv_temps.strftime("%H:%M:%S"))
+        return heure()
 
-hour()
+
+heure()
