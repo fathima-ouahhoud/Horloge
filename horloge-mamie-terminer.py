@@ -10,7 +10,7 @@ print("Modifier l'heure = 3")
 print("Voir l'heure en format AM/PM = 4")
 print("")
 
-def heure():
+def horloge_mamie():
 
     commande = input("Quelle commande utiliser ? : ")
 
@@ -58,7 +58,7 @@ def heure():
 
     else:
         print("Mauvaise commande, réessayez !")
-        return heure()
+        return horloge_mamie()
 
 
-heure()
+horloge_mamie()
