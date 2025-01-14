@@ -7,11 +7,13 @@ print("Commandes :")
 print("Voir l'heure = 1")
 print("Creér une alarme = 2")
 print("Modifier l'heure = 3")
+print("Voir l'heure en format AM/PM = 4")
 print("")
 
 def hour():
 
     commande = input("Quelle commande utiliser ? : ")
+
 #afficher l'heure 
     if commande == "1":
         def horloge():
@@ -39,6 +41,7 @@ def hour():
                     print(("\nIl est l'heure !!!"))
         alarme()
 
+#modifier l'heure
     if commande == "3":
         while True:
          heure = int(input("Pour quelle heure ? : "))
@@ -47,6 +50,15 @@ def hour():
          print(f"L'heure a été modifiée pour {heure} h {minute} m {seconde} s")
          afficher_heure((heure, minute, seconde))
          break
+
+#afficher l'heure en format AM/PM
+    if commande == "4":
+            def horloge():
+                while True:
+                    print(time.strftime("%I:%M:%S %p"), end="\r")
+                    time.sleep(1)
+            horloge()
+
     else:
         print("Mauvaise commande, réessayez !")
 #affiche l'heure modifier       
@@ -55,5 +67,5 @@ def afficher_heure(heure):
     mtn = datetime.datetime.now()
     nouv_temps = mtn.replace(hour=heures, minute=minutes, second=secondes)
     print("Nouveau temps:", nouv_temps.strftime("%H:%M:%S"))
-            
+
 hour()
